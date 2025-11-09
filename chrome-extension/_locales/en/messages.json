@@ -1,0 +1,190 @@
+{
+  "extensionName": {
+    "message": "Suno Tracks Exporter",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Quickly export your Suno tracks from each workspace as MP3 or WAV files",
+    "description": "Extension description"
+  },
+  "openDownloader": {
+    "message": "Open Downloader on Suno.com",
+    "description": "Button to open downloader"
+  },
+  "goToSuno": {
+    "message": "Go to Suno.com",
+    "description": "Button to navigate to Suno"
+  },
+  "extractToken": {
+    "message": "Extract Session from Page",
+    "description": "Button to extract session"
+  },
+  "extracting": {
+    "message": "Extracting...",
+    "description": "Extracting session status"
+  },
+  "waitingForToken": {
+    "message": "Looking for session...",
+    "description": "Waiting for session status"
+  },
+  "tokenFound": {
+    "message": "Session found! Ready to download.",
+    "description": "Session found status"
+  },
+  "tokenNotFound": {
+    "message": "Session not found.",
+    "description": "Session not found status"
+  },
+  "tokenNotFoundInstructions": {
+    "message": "Navigate around suno.com (library, create page, etc.) to capture session automatically, or click \"Extract Session\".",
+    "description": "Instructions when session not found"
+  },
+  "pleaseVisitSuno": {
+    "message": "Please visit suno.com first",
+    "description": "Message to visit Suno first"
+  },
+  "navigatingToLibrary": {
+    "message": "Navigating to library... Session will be captured automatically from API requests.",
+    "description": "Navigating status"
+  },
+  "tokenCaptured": {
+    "message": "Session captured successfully! You can now use the downloader.",
+    "description": "Session captured successfully"
+  },
+  "tokenNotCaptured": {
+    "message": "Session not captured. Try:",
+    "description": "Session not captured message"
+  },
+  "tokenNotCapturedInstructions": {
+    "message": "1. Navigate to different pages on suno.com\n2. Click on \"Library\" or \"Create\" to trigger API calls\n3. The session will be captured automatically",
+    "description": "Instructions when session not captured"
+  },
+  "instructions": {
+    "message": "Instructions:",
+    "description": "Instructions label"
+  },
+  "instruction1": {
+    "message": "Visit suno.com and log in",
+    "description": "First instruction"
+  },
+  "instruction2": {
+    "message": "Click \"Extract Session\" if session is not found automatically",
+    "description": "Second instruction"
+  },
+  "instruction3": {
+    "message": "Click \"Open Downloader\" or use the button on the page",
+    "description": "Third instruction"
+  },
+  "instruction4": {
+    "message": "Select tracks and download",
+    "description": "Fourth instruction"
+  },
+  "downloadableTracks": {
+    "message": "downloadable tracks across",
+    "description": "Downloadable tracks text"
+  },
+  "workspace": {
+    "message": "workspace",
+    "description": "Workspace label"
+  },
+  "workspaces": {
+    "message": "workspace(s)",
+    "description": "Workspaces label"
+  },
+  "downloadSelectedMP3": {
+    "message": "Download Selected MP3",
+    "description": "Download selected MP3 button"
+  },
+  "downloadSelectedWAV": {
+    "message": "Convert & Download Selected WAV",
+    "description": "Download selected WAV button"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all checkbox"
+  },
+  "warning": {
+    "message": "Warning:",
+    "description": "Warning label"
+  },
+  "warningMessage": {
+    "message": "You're about to download a potentially large number of files. To avoid confirming each download one by one,",
+    "description": "Warning message"
+  },
+  "changeChromeSettings": {
+    "message": "change these Chrome settings",
+    "description": "Link to Chrome settings"
+  },
+  "turnOffAskWhere": {
+    "message": "and turn OFF \"Ask where to save each file before downloading\"",
+    "description": "Turn off ask where to save instruction"
+  },
+  "stop": {
+    "message": "STOP",
+    "description": "Stop button"
+  },
+  "stoppingDownloads": {
+    "message": "Stopping downloads...",
+    "description": "Stopping downloads message"
+  },
+  "stopped": {
+    "message": "Stopped! Downloaded",
+    "description": "Stopped message"
+  },
+  "of": {
+    "message": "of",
+    "description": "Of connector"
+  },
+  "tracks": {
+    "message": "tracks",
+    "description": "Tracks label"
+  },
+  "downloaded": {
+    "message": "Downloaded",
+    "description": "Downloaded label"
+  },
+  "completed": {
+    "message": "Completed! Downloaded",
+    "description": "Completed message"
+  },
+  "downloading": {
+    "message": "Downloading",
+    "description": "Downloading label"
+  },
+  "converting": {
+    "message": "Converting",
+    "description": "Converting label"
+  },
+  "waitingForConversion": {
+    "message": "Waiting for conversion...",
+    "description": "Waiting for conversion"
+  },
+  "conversionFailed": {
+    "message": "Conversion failed:",
+    "description": "Conversion failed message"
+  },
+  "downloadMP3": {
+    "message": "Download MP3",
+    "description": "Download MP3 button"
+  },
+  "downloadWAV": {
+    "message": "Download WAV",
+    "description": "Download WAV button"
+  },
+  "noTracksFound": {
+    "message": "No downloadable tracks found.",
+    "description": "No tracks found message"
+  },
+  "loadingTracks": {
+    "message": "Loading tracks...",
+    "description": "Loading tracks message"
+  },
+  "errorLoadingTracks": {
+    "message": "Error loading tracks:",
+    "description": "Error loading tracks"
+  },
+  "close": {
+    "message": "Close",
+    "description": "Close button"
+  }
+}

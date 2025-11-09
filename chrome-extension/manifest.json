@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Suno Tracks Exporter",
+  "version": "1.0.0",
+  "description": "__MSG_extensionDescription__",
+  "default_locale": "en",
+  "permissions": ["storage", "downloads", "tabs", "webRequest"],
+  "host_permissions": [
+    "https://suno.com/*",
+    "https://studio-api.prod.suno.com/*",
+    "https://cdn1.suno.ai/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://suno.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "128": "icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["icon128.png"],
+      "matches": ["https://suno.com/*"]
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+# Suno Tracks Exporter - Complete Guide
+
+## Overview
+Suno Tracks Exporter is a powerful Chrome extension designed to help you efficiently export and download all your music tracks created on Suno.com. Whether you're a content creator, musician, or just someone who loves creating AI-generated music, this extension makes it easy to batch download your tracks in both MP3 and WAV formats, organized by workspace.
+
+## Key Features
+
+### 🔐 Automatic Authentication
+- **Seamless Token Extraction**: The extension automatically captures your authentication token from Suno.com as you browse
+- **No Manual Configuration**: Simply visit suno.com and log in - the extension handles the rest
+- **Token Refresh**: Automatically refreshes tokens when they expire, ensuring uninterrupted access
+
+### 📋 Comprehensive Track Listing
+- **Multi-Workspace Support**: Fetches tracks from all your workspaces automatically
+- **Complete Track Information**: Displays track titles, IDs, and workspace associations
+- **Pagination Handling**: Automatically handles pagination to fetch all available tracks
+- **Real-time Updates**: Always shows your latest tracks
+
+### 📥 Advanced Download Management
+- **Batch Downloads**: Download multiple tracks simultaneously with intelligent queuing
+- **Format Selection**: Choose between MP3 (instant) or WAV (high-quality conversion)
+- **Selective Downloads**: Select individual tracks or entire workspaces
+- **Progress Tracking**: Real-time progress indicators with percentage completion
+- **Stop Functionality**: Pause or stop batch downloads at any time
+
+### 🎯 Smart Organization
+- **Workspace Grouping**: Tracks are automatically organized by workspace
+- **Collapsible Sections**: Collapse workspaces you're not interested in
+- **Bulk Selection**: Select all tracks or all tracks within a workspace with one click
+- **Custom Filenames**: Files are saved with descriptive names: `workspace-trackname-trackid.extension`
+
+### 🎵 Format Support
+- **MP3 Downloads**: Instant downloads of MP3 files directly from Suno's CDN
+- **WAV Conversion**: High-quality WAV conversion with automatic polling
+- **Conversion Status**: Real-time updates on conversion progress
+- **Error Handling**: Graceful error handling with retry mechanisms
+
+### ⚡ Performance & Reliability
+- **Rate Limiting Protection**: Built-in delays to prevent API throttling
+- **Automatic Retries**: Handles network errors and API failures gracefully
+- **Chrome Downloads API**: Uses native Chrome downloads for reliable file management
+- **Background Processing**: Downloads continue even if you close the modal
+
+### 🎨 User Experience
+- **Dark Mode Support**: Automatically adapts to your browser's dark mode preference
+- **Intuitive Interface**: Clean, modern UI that integrates seamlessly with Suno.com
+- **Responsive Design**: Works perfectly on all screen sizes
+- **Accessibility**: Clear labels, tooltips, and status messages
+
+### 🔒 Privacy & Security
+- **Local Storage Only**: All tokens and preferences stored locally on your device
+- **No External Servers**: All API calls go directly to Suno's servers
+- **No Data Collection**: We don't collect, store, or transmit any of your data
+- **Open Source**: Transparent codebase you can review
+
+## How It Works
+
+### Installation
+1. Install the extension from the Chrome Web Store
+2. The extension will appear in your Chrome toolbar
+3. No additional setup required!
+
+### First Use
+1. Visit suno.com and log in to your account
+2. Navigate around the site (library, create page, etc.) to allow token capture
+3. Click the extension icon in your toolbar
+4. Click "Open Downloader on Suno.com"
+5. The extension will automatically fetch all your tracks from all workspaces
+
+### Downloading Tracks
+
+#### MP3 Downloads
+1. Select the tracks you want to download (individual checkboxes or workspace-level selection)
+2. Click "Download Selected MP3"
+3. Files will be saved to your default Chrome Downloads folder
+4. Progress is shown in real-time
+
+#### WAV Downloads
+1. Select the tracks you want to convert
+2. Click "Convert & Download Selected WAV"
+3. The extension will:
+   - Initiate WAV conversion for each track
+   - Poll for conversion completion
+   - Download the WAV files automatically
+4. This process takes longer but provides higher quality
+
+### Workspace Management
+- **View All Workspaces**: All your workspaces are listed automatically
+- **Collapse/Expand**: Click workspace headers to collapse or expand
+- **Select All**: Use the master checkbox to select all tracks
+- **Workspace Selection**: Use workspace checkboxes to select all tracks in a workspace
+
+### Filename Convention
+Files are saved with the format: `workspace-trackname-trackid.extension`
+- Example: `MyWorkspace-MyAwesomeSong-abc123def456.mp3`
+- This ensures easy organization and prevents duplicates
+
+## Tips & Best Practices
+
+### For Best Performance
+- **Automatic Downloads**: Enable automatic downloads in Chrome settings to avoid confirmation dialogs
+  - Go to Chrome Settings → Downloads
+  - Turn OFF "Ask where to save each file before downloading"
+- **Batch Size**: For large collections, download in smaller batches to avoid overwhelming your system
+- **WAV Conversion**: WAV conversions take time - be patient, especially for large batches
+
+### Organization Tips
+- **Workspace Naming**: Use descriptive workspace names for easier file organization
+- **Track Titles**: Keep track titles concise and descriptive
+- **File Management**: Consider organizing downloaded files into folders by workspace
+
+### Troubleshooting
+- **Token Issues**: If downloads fail, click "Extract Token from Page" to refresh your authentication
+- **Missing Tracks**: Navigate to different pages on Suno.com to trigger API calls
+- **Download Errors**: Check your Chrome downloads folder permissions
+- **Conversion Failures**: Some tracks may fail to convert - these will be marked in the progress
+
+## Technical Details
+
+### Permissions Explained
+- **storage**: Saves your authentication token and preferences locally
+- **downloads**: Enables file downloads to your computer
+- **tabs**: Allows the extension to interact with Suno.com tabs
+- **scripting**: Injects the downloader interface into Suno.com
+- **webRequest**: Captures authentication tokens from API requests
+
+### API Endpoints Used
+- `/api/project/me`: Fetches all workspaces
+- `/api/feed/v3`: Fetches tracks with pagination
+- `/api/gen/{clip_id}/convert_wav/`: Initiates WAV conversion
+- `/api/gen/{clip_id}/wav_file/`: Polls for WAV file URL
+
+### Browser Compatibility
+- **Chrome**: Full support (recommended)
+- **Edge**: Full support (Chromium-based)
+- **Brave**: Full support (Chromium-based)
+- **Opera**: Full support (Chromium-based)
+
+## Privacy Policy
+This extension:
+- ✅ Stores authentication tokens locally on your device only
+- ✅ Does not send any data to external servers
+- ✅ Does not collect analytics or usage data
+- ✅ Does not share your information with third parties
+- ✅ All API calls go directly to Suno's servers
+
+## Support & Feedback
+We're committed to providing the best experience possible. If you encounter any issues or have suggestions:
+- Check the troubleshooting section above
+- Ensure you're using the latest version
+- Make sure you're logged into Suno.com
+
+## Version History
+- **1.0.0**: Initial release with full feature set
+  - Multi-workspace support
+  - MP3 and WAV downloads
+  - Batch download capabilities
+  - Dark mode support
+  - Internationalization (English, Portuguese, Spanish)
+
+## Future Enhancements
+We're constantly working to improve the extension. Planned features include:
+- Download history tracking
+- Custom download locations
+- Export playlists
+- Metadata editing
+- And more!
+
+Thank you for using Suno Tracks Exporter! We hope it makes managing your Suno tracks easier and more enjoyable.
+

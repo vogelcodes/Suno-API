@@ -1,16 +1,18 @@
 # -*- coding:utf-8 -*-
 
-import json
-
-from fastapi import Depends, FastAPI, HTTPException, Request, status
+from fastapi import FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
 
 import schemas
-from deps import get_token
-from utils import generate_lyrics, generate_music, get_feed, get_lyrics, get_credits
+from suno_client import generate_song, get_feed, get_billing_info, get_session
+from download import download_audio_stream, get_audio_url, get_audio_info
 
-app = FastAPI()
-
+app = FastAPI(
+    title="Suno API",
+    description="Unofficial Suno API for generating and retrieving songs",
+    version="2.0.0"
+)
 
 app.add_middleware(
     CORSMiddleware,
@@ -22,82 +24,140 @@ app.add_middleware(
 
 
 @app.get("/")
-async def get_root():
-    return schemas.Response()
+async def root():
+    """Root endpoint"""
+    return {
+        "message": "Suno API",
+        "version": "2.0.0",
+        "docs": "/docs"
+    }
 
 
-@app.post("/generate")
-async def generate(
-    data: schemas.CustomModeGenerateParam, token: str = Depends(get_token)
-):
+@app.get("/health")
+async def health():
+    """Health check endpoint"""
+    return {"status": "healthy"}
+
+
+@app.post("/generate", response_model=schemas.Response)
+async def generate(request: schemas.GenerateSongRequest):
+    """Generate a song using GPT description"""
     try:
-        resp = await generate_music(data.dict(), token)
-        return resp
+        result = await generate_song(
+            gpt_description_prompt=request.gpt_description_prompt,
+            prompt=request.prompt,
+            make_instrumental=request.make_instrumental,
+            mv=request.mv,
+            project_id=request.project_id
+        )
+        return schemas.Response(data=result)
     except Exception as e:
         raise HTTPException(
-            detail=str(e), status_code=status.HTTP_500_INTERNAL_SERVER_ERROR
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=str(e)
         )
 
 
-@app.post("/generate/description-mode")
-async def generate_with_song_description(
-    data: schemas.DescriptionModeGenerateParam, token: str = Depends(get_token)
-):
+@app.post("/feed", response_model=schemas.Response)
+async def feed(request: schemas.GetFeedRequest):
+    """Get song/clip information by IDs"""
     try:
-        resp = await generate_music(data.dict(), token)
-        return resp
+        result = await get_feed(request.clip_ids)
+        return schemas.Response(data=result)
     except Exception as e:
         raise HTTPException(
-            detail=str(e), status_code=status.HTTP_500_INTERNAL_SERVER_ERROR
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=str(e)
         )
 
 
-@app.get("/feed/{aid}")
-async def fetch_feed(aid: str, token: str = Depends(get_token)):
+@app.get("/feed/{clip_id}", response_model=schemas.Response)
+async def get_single_feed(clip_id: str):
+    """Get single song/clip information by ID"""
     try:
-        resp = await get_feed(aid, token)
-        return resp
+        result = await get_feed([clip_id])
+        return schemas.Response(data=result)
     except Exception as e:
         raise HTTPException(
-            detail=str(e), status_code=status.HTTP_500_INTERNAL_SERVER_ERROR
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=str(e)
         )
 
 
-@app.post("/generate/lyrics/")
-async def generate_lyrics_post(request: Request, token: str = Depends(get_token)):
-    req = await request.json()
-    prompt = req.get("prompt")
-    if prompt is None:
-        raise HTTPException(
-            detail="prompt is required", status_code=status.HTTP_400_BAD_REQUEST
-        )
-
+@app.get("/session", response_model=schemas.Response)
+async def session():
+    """Get session information"""
     try:
-        resp = await generate_lyrics(prompt, token)
-        return resp
+        result = await get_session()
+        return schemas.Response(data=result)
     except Exception as e:
         raise HTTPException(
-            detail=str(e), status_code=status.HTTP_500_INTERNAL_SERVER_ERROR
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=str(e)
         )
 
 
-@app.get("/lyrics/{lid}")
-async def fetch_lyrics(lid: str, token: str = Depends(get_token)):
+@app.get("/credits", response_model=schemas.Response)
+async def credits():
+    """Get billing/credits information"""
     try:
-        resp = await get_lyrics(lid, token)
-        return resp
+        result = await get_billing_info()
+        return schemas.Response(data=result)
     except Exception as e:
         raise HTTPException(
-            detail=str(e), status_code=status.HTTP_500_INTERNAL_SERVER_ERROR
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=str(e)
         )
 
 
-@app.get("/get_credits")
-async def fetch_credits(token: str = Depends(get_token)):
+@app.get("/download/{clip_id}")
+async def download(clip_id: str):
+    """Download audio file for a clip ID"""
     try:
-        resp = await get_credits(token)
-        return resp
+        stream = await download_audio_stream(clip_id)
+        if not stream:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=f"Audio not found for clip ID: {clip_id}"
+            )
+        return stream
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(
-            detail=str(e), status_code=status.HTTP_500_INTERNAL_SERVER_ERROR
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=str(e)
+        )
+
+
+@app.get("/download-url/{clip_id}", response_model=schemas.Response)
+async def get_download_url(clip_id: str):
+    """Get the direct download URL for a clip ID"""
+    try:
+        audio_url = await get_audio_url(clip_id)
+        if not audio_url:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=f"Audio URL not found for clip ID: {clip_id}"
+            )
+        return schemas.Response(data={"audio_url": audio_url, "clip_id": clip_id})
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=str(e)
+        )
+
+
+@app.get("/audio-info/{clip_id}", response_model=schemas.Response)
+async def audio_info(clip_id: str):
+    """Get audio information including URL and metadata"""
+    try:
+        result = await get_audio_info(clip_id)
+        return schemas.Response(data=result)
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=str(e)
         )

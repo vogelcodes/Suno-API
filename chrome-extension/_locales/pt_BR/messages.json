@@ -1,0 +1,191 @@
+{
+  "extensionName": {
+    "message": "Exportador de Faixas Suno",
+    "description": "Nome da extensão"
+  },
+  "extensionDescription": {
+    "message": "Exporte rapidamente suas faixas do Suno de cada workspace como arquivos MP3 ou WAV",
+    "description": "Descrição da extensão"
+  },
+  "openDownloader": {
+    "message": "Abrir Exportador no Suno.com",
+    "description": "Botão para abrir exportador"
+  },
+  "goToSuno": {
+    "message": "Ir para Suno.com",
+    "description": "Botão para navegar para Suno"
+  },
+  "extractToken": {
+    "message": "Extrair Sessão da Página",
+    "description": "Botão para extrair sessão"
+  },
+  "extracting": {
+    "message": "Extraindo...",
+    "description": "Status de extração de sessão"
+  },
+  "waitingForToken": {
+    "message": "Procurando sessão...",
+    "description": "Status procurando sessão"
+  },
+  "tokenFound": {
+    "message": "Sessão encontrada! Pronto para baixar.",
+    "description": "Status sessão encontrada"
+  },
+  "tokenNotFound": {
+    "message": "Sessão não encontrada.",
+    "description": "Status sessão não encontrada"
+  },
+  "tokenNotFoundInstructions": {
+    "message": "Navegue pelo suno.com (biblioteca, página de criação, etc.) para capturar a sessão automaticamente, ou clique em \"Extrair Sessão\".",
+    "description": "Instruções quando sessão não encontrada"
+  },
+  "pleaseVisitSuno": {
+    "message": "Por favor, visite suno.com primeiro",
+    "description": "Mensagem para visitar Suno primeiro"
+  },
+  "navigatingToLibrary": {
+    "message": "Navegando para biblioteca... A sessão será capturada automaticamente das requisições da API.",
+    "description": "Status de navegação"
+  },
+  "tokenCaptured": {
+    "message": "Sessão capturada com sucesso! Agora você pode usar o exportador.",
+    "description": "Sessão capturada com sucesso"
+  },
+  "tokenNotCaptured": {
+    "message": "Sessão não capturada. Tente:",
+    "description": "Mensagem sessão não capturada"
+  },
+  "tokenNotCapturedInstructions": {
+    "message": "1. Navegue para páginas diferentes no suno.com\n2. Clique em \"Biblioteca\" ou \"Criar\" para acionar chamadas da API\n3. A sessão será capturada automaticamente",
+    "description": "Instruções quando sessão não capturada"
+  },
+  "instructions": {
+    "message": "Instruções:",
+    "description": "Rótulo de instruções"
+  },
+  "instruction1": {
+    "message": "Visite suno.com e faça login",
+    "description": "Primeira instrução"
+  },
+  "instruction2": {
+    "message": "Clique em \"Extrair Sessão\" se a sessão não for encontrada automaticamente",
+    "description": "Segunda instrução"
+  },
+  "instruction3": {
+    "message": "Clique em \"Abrir Exportador\" ou use o botão na página",
+    "description": "Terceira instrução"
+  },
+  "instruction4": {
+    "message": "Selecione as faixas e baixe",
+    "description": "Quarta instrução"
+  },
+  "downloadableTracks": {
+    "message": "faixas disponíveis para download em",
+    "description": "Texto de faixas disponíveis"
+  },
+  "workspace": {
+    "message": "workspace",
+    "description": "Rótulo de workspace"
+  },
+  "workspaces": {
+    "message": "workspace(s)",
+    "description": "Rótulo de workspaces"
+  },
+  "downloadSelectedMP3": {
+    "message": "Baixar MP3 Selecionados",
+    "description": "Botão baixar MP3 selecionados"
+  },
+  "downloadSelectedWAV": {
+    "message": "Converter e Baixar WAV Selecionados",
+    "description": "Botão baixar WAV selecionados"
+  },
+  "selectAll": {
+    "message": "Selecionar Tudo",
+    "description": "Checkbox selecionar tudo"
+  },
+  "warning": {
+    "message": "Aviso:",
+    "description": "Rótulo de aviso"
+  },
+  "warningMessage": {
+    "message": "Você está prestes a baixar um grande número de arquivos. Para evitar confirmar cada download um por um,",
+    "description": "Mensagem de aviso"
+  },
+  "changeChromeSettings": {
+    "message": "altere essas configurações do Chrome",
+    "description": "Link para configurações do Chrome"
+  },
+  "turnOffAskWhere": {
+    "message": "e desative \"Perguntar onde salvar cada arquivo antes de baixar\"",
+    "description": "Instrução para desativar pergunta onde salvar"
+  },
+  "stop": {
+    "message": "PARAR",
+    "description": "Botão parar"
+  },
+  "stoppingDownloads": {
+    "message": "Parando downloads...",
+    "description": "Mensagem parando downloads"
+  },
+  "stopped": {
+    "message": "Parado! Baixados",
+    "description": "Mensagem parado"
+  },
+  "of": {
+    "message": "de",
+    "description": "Conector de"
+  },
+  "tracks": {
+    "message": "faixas",
+    "description": "Rótulo de faixas"
+  },
+  "downloaded": {
+    "message": "Baixados",
+    "description": "Rótulo baixados"
+  },
+  "completed": {
+    "message": "Concluído! Baixados",
+    "description": "Mensagem concluído"
+  },
+  "downloading": {
+    "message": "Baixando",
+    "description": "Rótulo baixando"
+  },
+  "converting": {
+    "message": "Convertendo",
+    "description": "Rótulo convertendo"
+  },
+  "waitingForConversion": {
+    "message": "Aguardando conversão...",
+    "description": "Aguardando conversão"
+  },
+  "conversionFailed": {
+    "message": "Conversão falhou:",
+    "description": "Mensagem conversão falhou"
+  },
+  "downloadMP3": {
+    "message": "Baixar MP3",
+    "description": "Botão baixar MP3"
+  },
+  "downloadWAV": {
+    "message": "Baixar WAV",
+    "description": "Botão baixar WAV"
+  },
+  "noTracksFound": {
+    "message": "Nenhuma faixa disponível para download encontrada.",
+    "description": "Mensagem nenhuma faixa encontrada"
+  },
+  "loadingTracks": {
+    "message": "Carregando faixas...",
+    "description": "Mensagem carregando faixas"
+  },
+  "errorLoadingTracks": {
+    "message": "Erro ao carregar faixas:",
+    "description": "Erro ao carregar faixas"
+  },
+  "close": {
+    "message": "Fechar",
+    "description": "Botão fechar"
+  }
+}
+

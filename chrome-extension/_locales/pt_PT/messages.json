@@ -1,0 +1,190 @@
+{
+  "extensionName": {
+    "message": "Exportador de Faixas Suno",
+    "description": "Nome da extensão"
+  },
+  "extensionDescription": {
+    "message": "Exporte rapidamente as suas faixas do Suno de cada área de trabalho como ficheiros MP3 ou WAV",
+    "description": "Descrição da extensão"
+  },
+  "openDownloader": {
+    "message": "Abrir Exportador no Suno.com",
+    "description": "Botão para abrir exportador"
+  },
+  "goToSuno": {
+    "message": "Ir para Suno.com",
+    "description": "Botão para navegar para Suno"
+  },
+  "extractToken": {
+    "message": "Extrair Sessão da Página",
+    "description": "Botão para extrair sessão"
+  },
+  "extracting": {
+    "message": "A extrair...",
+    "description": "Estado de extração de sessão"
+  },
+  "waitingForToken": {
+    "message": "À procura da sessão...",
+    "description": "Estado à procura da sessão"
+  },
+  "tokenFound": {
+    "message": "Sessão encontrada! Pronto para transferir.",
+    "description": "Estado sessão encontrada"
+  },
+  "tokenNotFound": {
+    "message": "Sessão não encontrada.",
+    "description": "Estado sessão não encontrada"
+  },
+  "tokenNotFoundInstructions": {
+    "message": "Navegue pelo suno.com (biblioteca, página de criação, etc.) para capturar a sessão automaticamente, ou clique em \"Extrair Sessão\".",
+    "description": "Instruções quando sessão não encontrada"
+  },
+  "pleaseVisitSuno": {
+    "message": "Por favor, visite suno.com primeiro",
+    "description": "Mensagem para visitar Suno primeiro"
+  },
+  "navigatingToLibrary": {
+    "message": "A navegar para biblioteca... A sessão será capturada automaticamente das requisições da API.",
+    "description": "Estado de navegação"
+  },
+  "tokenCaptured": {
+    "message": "Sessão capturada com sucesso! Agora pode usar o exportador.",
+    "description": "Sessão capturada com sucesso"
+  },
+  "tokenNotCaptured": {
+    "message": "Sessão não capturada. Tente:",
+    "description": "Mensagem sessão não capturada"
+  },
+  "tokenNotCapturedInstructions": {
+    "message": "1. Navegue para páginas diferentes no suno.com\n2. Clique em \"Biblioteca\" ou \"Criar\" para acionar chamadas da API\n3. A sessão será capturada automaticamente",
+    "description": "Instruções quando sessão não capturada"
+  },
+  "instructions": {
+    "message": "Instruções:",
+    "description": "Etiqueta de instruções"
+  },
+  "instruction1": {
+    "message": "Visite suno.com e inicie sessão",
+    "description": "Primeira instrução"
+  },
+  "instruction2": {
+    "message": "Clique em \"Extrair Sessão\" se a sessão não for encontrada automaticamente",
+    "description": "Segunda instrução"
+  },
+  "instruction3": {
+    "message": "Clique em \"Abrir Exportador\" ou use o botão na página",
+    "description": "Terceira instrução"
+  },
+  "instruction4": {
+    "message": "Selecione as faixas e transfira",
+    "description": "Quarta instrução"
+  },
+  "downloadableTracks": {
+    "message": "faixas disponíveis para transferência em",
+    "description": "Texto de faixas disponíveis"
+  },
+  "workspace": {
+    "message": "área de trabalho",
+    "description": "Etiqueta de área de trabalho"
+  },
+  "workspaces": {
+    "message": "área(s) de trabalho",
+    "description": "Etiqueta de áreas de trabalho"
+  },
+  "downloadSelectedMP3": {
+    "message": "Transferir MP3 Selecionados",
+    "description": "Botão transferir MP3 selecionados"
+  },
+  "downloadSelectedWAV": {
+    "message": "Converter e Transferir WAV Selecionados",
+    "description": "Botão transferir WAV selecionados"
+  },
+  "selectAll": {
+    "message": "Selecionar Tudo",
+    "description": "Caixa de seleção selecionar tudo"
+  },
+  "warning": {
+    "message": "Aviso:",
+    "description": "Etiqueta de aviso"
+  },
+  "warningMessage": {
+    "message": "Está prestes a transferir um grande número de ficheiros. Para evitar confirmar cada transferência um por um,",
+    "description": "Mensagem de aviso"
+  },
+  "changeChromeSettings": {
+    "message": "altere estas definições do Chrome",
+    "description": "Ligação para definições do Chrome"
+  },
+  "turnOffAskWhere": {
+    "message": "e desative \"Perguntar onde guardar cada ficheiro antes de transferir\"",
+    "description": "Instrução para desativar pergunta onde guardar"
+  },
+  "stop": {
+    "message": "PARAR",
+    "description": "Botão parar"
+  },
+  "stoppingDownloads": {
+    "message": "A parar transferências...",
+    "description": "Mensagem a parar transferências"
+  },
+  "stopped": {
+    "message": "Parado! Transferidos",
+    "description": "Mensagem parado"
+  },
+  "of": {
+    "message": "de",
+    "description": "Conector de"
+  },
+  "tracks": {
+    "message": "faixas",
+    "description": "Etiqueta de faixas"
+  },
+  "downloaded": {
+    "message": "Transferidos",
+    "description": "Etiqueta transferidos"
+  },
+  "completed": {
+    "message": "Concluído! Transferidos",
+    "description": "Mensagem concluído"
+  },
+  "downloading": {
+    "message": "A transferir",
+    "description": "Etiqueta a transferir"
+  },
+  "converting": {
+    "message": "A converter",
+    "description": "Etiqueta a converter"
+  },
+  "waitingForConversion": {
+    "message": "À espera da conversão...",
+    "description": "À espera da conversão"
+  },
+  "conversionFailed": {
+    "message": "Conversão falhou:",
+    "description": "Mensagem conversão falhou"
+  },
+  "downloadMP3": {
+    "message": "Transferir MP3",
+    "description": "Botão transferir MP3"
+  },
+  "downloadWAV": {
+    "message": "Transferir WAV",
+    "description": "Botão transferir WAV"
+  },
+  "noTracksFound": {
+    "message": "Nenhuma faixa disponível para transferência encontrada.",
+    "description": "Mensagem nenhuma faixa encontrada"
+  },
+  "loadingTracks": {
+    "message": "A carregar faixas...",
+    "description": "Mensagem a carregar faixas"
+  },
+  "errorLoadingTracks": {
+    "message": "Erro ao carregar faixas:",
+    "description": "Erro ao carregar faixas"
+  },
+  "close": {
+    "message": "Fechar",
+    "description": "Botão fechar"
+  }
+}

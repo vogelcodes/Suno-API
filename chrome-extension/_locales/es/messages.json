@@ -1,0 +1,191 @@
+{
+  "extensionName": {
+    "message": "Exportador de Pistas Suno",
+    "description": "Nombre de la extensión"
+  },
+  "extensionDescription": {
+    "message": "Exporta rápidamente tus pistas de Suno de cada espacio de trabajo como archivos MP3 o WAV",
+    "description": "Descripción de la extensión"
+  },
+  "openDownloader": {
+    "message": "Abrir Exportador en Suno.com",
+    "description": "Botón para abrir exportador"
+  },
+  "goToSuno": {
+    "message": "Ir a Suno.com",
+    "description": "Botón para navegar a Suno"
+  },
+  "extractToken": {
+    "message": "Extraer Sesión de la Página",
+    "description": "Botón para extraer sesión"
+  },
+  "extracting": {
+    "message": "Extrayendo...",
+    "description": "Estado de extracción de sesión"
+  },
+  "waitingForToken": {
+    "message": "Buscando sesión...",
+    "description": "Estado buscando sesión"
+  },
+  "tokenFound": {
+    "message": "¡Sesión encontrada! Listo para descargar.",
+    "description": "Estado sesión encontrada"
+  },
+  "tokenNotFound": {
+    "message": "Sesión no encontrada.",
+    "description": "Estado sesión no encontrada"
+  },
+  "tokenNotFoundInstructions": {
+    "message": "Navega por suno.com (biblioteca, página de creación, etc.) para capturar la sesión automáticamente, o haz clic en \"Extraer Sesión\".",
+    "description": "Instrucciones cuando sesión no encontrada"
+  },
+  "pleaseVisitSuno": {
+    "message": "Por favor, visita suno.com primero",
+    "description": "Mensaje para visitar Suno primero"
+  },
+  "navigatingToLibrary": {
+    "message": "Navegando a biblioteca... La sesión se capturará automáticamente de las solicitudes de la API.",
+    "description": "Estado de navegación"
+  },
+  "tokenCaptured": {
+    "message": "¡Sesión capturada con éxito! Ahora puedes usar el exportador.",
+    "description": "Sesión capturada con éxito"
+  },
+  "tokenNotCaptured": {
+    "message": "Sesión no capturada. Intenta:",
+    "description": "Mensaje sesión no capturada"
+  },
+  "tokenNotCapturedInstructions": {
+    "message": "1. Navega a páginas diferentes en suno.com\n2. Haz clic en \"Biblioteca\" o \"Crear\" para activar llamadas de la API\n3. La sesión se capturará automáticamente",
+    "description": "Instrucciones cuando sesión no capturada"
+  },
+  "instructions": {
+    "message": "Instrucciones:",
+    "description": "Etiqueta de instrucciones"
+  },
+  "instruction1": {
+    "message": "Visita suno.com e inicia sesión",
+    "description": "Primera instrucción"
+  },
+  "instruction2": {
+    "message": "Haz clic en \"Extraer Sesión\" si la sesión no se encuentra automáticamente",
+    "description": "Segunda instrucción"
+  },
+  "instruction3": {
+    "message": "Haz clic en \"Abrir Exportador\" o usa el botón en la página",
+    "description": "Tercera instrucción"
+  },
+  "instruction4": {
+    "message": "Selecciona las pistas y descarga",
+    "description": "Cuarta instrucción"
+  },
+  "downloadableTracks": {
+    "message": "pistas disponibles para descargar en",
+    "description": "Texto de pistas disponibles"
+  },
+  "workspace": {
+    "message": "espacio de trabajo",
+    "description": "Etiqueta de espacio de trabajo"
+  },
+  "workspaces": {
+    "message": "espacio(s) de trabajo",
+    "description": "Etiqueta de espacios de trabajo"
+  },
+  "downloadSelectedMP3": {
+    "message": "Descargar MP3 Seleccionados",
+    "description": "Botón descargar MP3 seleccionados"
+  },
+  "downloadSelectedWAV": {
+    "message": "Convertir y Descargar WAV Seleccionados",
+    "description": "Botón descargar WAV seleccionados"
+  },
+  "selectAll": {
+    "message": "Seleccionar Todo",
+    "description": "Casilla de selección seleccionar todo"
+  },
+  "warning": {
+    "message": "Advertencia:",
+    "description": "Etiqueta de advertencia"
+  },
+  "warningMessage": {
+    "message": "Estás a punto de descargar un gran número de archivos. Para evitar confirmar cada descarga uno por uno,",
+    "description": "Mensaje de advertencia"
+  },
+  "changeChromeSettings": {
+    "message": "cambia estas configuraciones de Chrome",
+    "description": "Enlace a configuraciones de Chrome"
+  },
+  "turnOffAskWhere": {
+    "message": "y desactiva \"Preguntar dónde guardar cada archivo antes de descargar\"",
+    "description": "Instrucción para desactivar pregunta dónde guardar"
+  },
+  "stop": {
+    "message": "DETENER",
+    "description": "Botón detener"
+  },
+  "stoppingDownloads": {
+    "message": "Deteniendo descargas...",
+    "description": "Mensaje deteniendo descargas"
+  },
+  "stopped": {
+    "message": "¡Detenido! Descargados",
+    "description": "Mensaje detenido"
+  },
+  "of": {
+    "message": "de",
+    "description": "Conector de"
+  },
+  "tracks": {
+    "message": "pistas",
+    "description": "Etiqueta de pistas"
+  },
+  "downloaded": {
+    "message": "Descargados",
+    "description": "Etiqueta descargados"
+  },
+  "completed": {
+    "message": "¡Completado! Descargados",
+    "description": "Mensaje completado"
+  },
+  "downloading": {
+    "message": "Descargando",
+    "description": "Etiqueta descargando"
+  },
+  "converting": {
+    "message": "Convirtiendo",
+    "description": "Etiqueta convirtiendo"
+  },
+  "waitingForConversion": {
+    "message": "Esperando conversión...",
+    "description": "Esperando conversión"
+  },
+  "conversionFailed": {
+    "message": "Conversión falló:",
+    "description": "Mensaje conversión falló"
+  },
+  "downloadMP3": {
+    "message": "Descargar MP3",
+    "description": "Botón descargar MP3"
+  },
+  "downloadWAV": {
+    "message": "Descargar WAV",
+    "description": "Botón descargar WAV"
+  },
+  "noTracksFound": {
+    "message": "No se encontraron pistas disponibles para descargar.",
+    "description": "Mensaje ninguna pista encontrada"
+  },
+  "loadingTracks": {
+    "message": "Cargando pistas...",
+    "description": "Mensaje cargando pistas"
+  },
+  "errorLoadingTracks": {
+    "message": "Error al cargar pistas:",
+    "description": "Error al cargar pistas"
+  },
+  "close": {
+    "message": "Cerrar",
+    "description": "Botón cerrar"
+  }
+}
+
